@@ -1,0 +1,43 @@
+body{
+    background-image: url("img/land.png");
+}
+.player{
+    height: 100px;
+    width: 80px;
+    
+    background-image: url("img/pf.png");
+    background-size: 240px 100px;
+    background-position: -80px 0;
+    position: fixed;
+    z-index: 999;
+    
+}
+.player .active{
+    animation: .2s walk linear infinite;
+}
+@keyframes walk{
+    0%, 32%{
+        background-position: 0 0;
+    }
+    33%, 65%{
+        background-position: -80px  0;
+    }
+    66%, 100%{
+        background-position: -160px 0;
+    }
+}
+.bush{
+    width: 40px;
+    height: 50px;
+    background-image: url("img/bush.png");
+    background-size: 100% 100%;
+    position: fixed;
+    z-index: -1;
+}
+.pokeball{
+    width: 30px;
+    height: 30px;
+    background-image: url("img/pokeball.png");
+    background-size: 100% 100%;
+    position: fixed;
+}
